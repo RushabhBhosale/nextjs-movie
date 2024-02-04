@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} -mb-48`}>
         <div className='sticky top-0'>
-          <Navbar />
+          {/* <Navbar /> */}
         </div>
         <div className="lg:flex mt-4 h-[38rem] overflow-auto">
           <div
