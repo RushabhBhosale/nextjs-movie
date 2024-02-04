@@ -8,7 +8,7 @@ import Sidebar from '@/components/Sidebar';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
-  const [isSidebarVisible, setSidebarVisible] = useState(false);
+  const [isSidebarVisible, setSidebarVisible] = useState(true);
 
   const toggleSidebar = () => {
     setSidebarVisible((prev) => !prev);
@@ -17,8 +17,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className='sticky top-0'>
-          <Navbar />
+        <div className='sticky navbar top-0'>
+          <Navbar toggle={toggleSidebar} />
         </div>
         <div className="lg:flex mt-4 h-[50rem] sm:h-[38rem] overflow-auto">
           <div
@@ -27,11 +27,8 @@ export default function RootLayout({ children }) {
           >
             <Sidebar />
           </div>
-          <div className="w-[82rem] bg-[#1a1820] rounded-tl-xl">{children}</div>
+          <div className="lg:w-[82rem] sm:w-full bg-[#1a1820] rounded-tl-xl">{children}</div>
         </div>
-        <button className="toggle-btn sm:hidden" onClick={toggleSidebar}>
-          Toggle Sidebar
-        </button>
       </body>
     </html>
   );

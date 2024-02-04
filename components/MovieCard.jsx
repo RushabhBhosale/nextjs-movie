@@ -2,13 +2,13 @@ import { StarIcon } from '@heroicons/react/24/solid'
 
 const MovieCard = ({ movie, }) => {
   return (
-    <div className="relative flex-shrink-0 mb-2">
-      <img className="rounded-3xl w-52 h-72 object-cover cursor-pointer" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt='poster' />
-      <div className="text-xl font-bold py-2">
+    <div className="relative flex-shrink-0 overflow-hidden mb-2">
+      <img className="sm:rounded-3xl rounded-md w-25 sm:w-52 h-40 sm:h-72 object-cover cursor-pointer" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt='poster' />
+      <div className="text-xl hidden sm:block font-bold py-2">
         {movie.title ? (movie.title.length > 17 ? `${movie.title.slice(0, 17)}...` : movie.title) :
           movie.name && (movie.name.length > 17 ? `${movie.name.slice(0, 17)}...` : movie.name)}
       </div>
-      <div className="flex justify-between">
+      <div className="sm:flex hidden justify-between">
         <div className="flex">
           <div className="pe-1 text-yellow-400">
             <StarIcon width={20} height={20} />

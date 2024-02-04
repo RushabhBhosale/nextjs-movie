@@ -45,6 +45,11 @@ body {
    visibility: visible;
 }
 
+.navbar {
+   z-index: 999999;
+   background-color: hsla(220, 17%, 7%, 1);
+}
+
 @media (max-width: 576px) {
 
    .gayab {
@@ -57,14 +62,12 @@ body {
       background-color: hsla(220, 17%, 7%, 1);
    }
 
-   .toggle-btn {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
+   .swiper-button-prev,
+   .swiper-button-next {
+      color: rgba(202, 192, 178, 0) !important;
+      height: 150px !important;
+      width: 50px !important;
+      transform: translateY(-40%);
    }
+
 }
