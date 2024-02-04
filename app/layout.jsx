@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${inter.className} pages overflow-auto`}>
+      <body className={`${inter.className} pages overflow-hidden`}>
         <div className='sticky navbar top-0'>
           <Navbar toggle={toggleSidebar} />
         </div>
