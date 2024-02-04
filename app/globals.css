@@ -45,24 +45,26 @@ body {
    visibility: visible;
 }
 
-.gayab {
-   transition: transform 0.3s ease-in-out;
-   transform: translateX(-100%);
-   position: absolute;
-}
+@media (max-width: 576px) {
 
-.hai {
-   z-index: 9999;
-   background-color: hsla(220, 17%, 7%, 1);
-}
+   .gayab {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(-100%);
+   }
 
-.toggle-btn {
-   position: fixed;
-   top: 10px;
-   left: 10px;
-   background-color: #333;
-   color: #fff;
-   border: none;
-   padding: 10px;
-   cursor: pointer;
+   .hai {
+      z-index: 9999;
+      background-color: hsla(220, 17%, 7%, 1);
+   }
+
+   .toggle-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+   }
 }

@@ -16,13 +16,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        <div className="flex mt-4">
+      <body className={`${inter.className} -mb-48`}>
+        <div className='sticky top-0'>
+          <Navbar />
+        </div>
+        <div className="lg:flex mt-4 h-[38rem] overflow-auto">
           <div
-            className={`lg:w-[12.5rem] transition-transform sidebar ${
-              isSidebarVisible ? 'gayab' : 'hai'
-            }`}
+            className={`lg:w-[12.5rem] absolute sm:static transition-transform h-[38rem] overflow-auto sidebar ${isSidebarVisible ? 'gayab' : 'hai'
+              }`}
           >
             <Sidebar />
           </div>
