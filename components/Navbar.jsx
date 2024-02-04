@@ -5,9 +5,9 @@ import { Bars3Icon } from '@heroicons/react/24/solid'
 
 const Navbar = ({ toggle }) => {
    return (
-      <div className='h-12 flex my-2 mt-5 items-center justify-between px-6 lg:px-16'>
+      <div className='sm:h-12 flex sm:my-2 sm:mt-5 items-center justify-between px-6 lg:px-16'>
          <button className="toggle-btn sm:hidden" onClick={toggle}>
-            <Bars3Icon className='w-6 h-6 ' />
+            <Bars3Icon className='w-6 h-6' />
          </button>
          <Image src={`/logo.png`} alt='logo' width={120} height={45} />
          <div className='relative'>

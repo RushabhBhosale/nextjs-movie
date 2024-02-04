@@ -45,21 +45,28 @@ body {
    visibility: visible;
 }
 
-.navbar {
-   z-index: 999999;
-   background-color: hsla(220, 17%, 7%, 1);
-}
 
 @media (max-width: 576px) {
-
+   .navbar {
+      z-index: 999999;
+      background-color: hsla(220, 17%, 7%, 1);
+      padding: 15px 0;
+   }
+   
    .gayab {
-      transition: transform 0.3s ease-in-out;
-      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out !important;
+      transform: translateX(-100%) !important;
+   }
+
+   .sidebar {
+      height: 735px;
+      position: fixed;
+      top: 62px;
    }
 
    .hai {
-      z-index: 9999;
-      background-color: hsla(220, 17%, 7%, 1);
+      z-index: 9999 !important;
+      background-color: hsla(220, 17%, 7%, 1) !important;
    }
 
    .swiper-button-prev,
@@ -67,7 +74,6 @@ body {
       color: rgba(202, 192, 178, 0) !important;
       height: 150px !important;
       width: 50px !important;
-      transform: translateY(-40%);
+      transform: translateY(-40%) !important;
    }
-
 }

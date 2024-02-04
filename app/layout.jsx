@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
         <div className='sticky navbar top-0'>
           <Navbar toggle={toggleSidebar} />
         </div>
-        <div className="lg:flex mt-4 h-[50rem] sm:h-[38rem] overflow-auto">
+        <div className="lg:flex sm:mt-4 sm:h-[38rem] overflow-auto">
           <div
-            className={`lg:w-[12.5rem] absolute -mt-1 sm:static transition-transform h-[50rem] overflow-auto sidebar ${isSidebarVisible ? 'gayab' : 'hai'
+            className={`lg:w-[12.5rem] absolute -mt-1 sm:static transition-transform overflow-auto sidebar ${isSidebarVisible ? 'gayab' : 'hai'
               }`}
           >
             <Sidebar />
