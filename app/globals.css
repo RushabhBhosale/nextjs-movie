@@ -45,16 +45,18 @@ body {
    visibility: visible;
 }
 
-.sidebar {
+.gayab {
    transition: transform 0.3s ease-in-out;
    transform: translateX(-100%);
- }
- 
- .sidebar.visible {
-   transform: translateX(0);
- }
- 
- .toggle-btn {
+   position: absolute;
+}
+
+.hai {
+   z-index: 9999;
+   background-color: hsla(220, 17%, 7%, 1);
+}
+
+.toggle-btn {
    position: fixed;
    top: 10px;
    left: 10px;
@@ -63,4 +65,4 @@ body {
    border: none;
    padding: 10px;
    cursor: pointer;
- }
+}

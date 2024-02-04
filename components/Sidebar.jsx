@@ -22,7 +22,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className='ps-8 h-[38rem] overflow-auto'>
+    <div className='ps-8 lg:h-[38rem] sm:h-screen overflow-auto'>
       <p className='font-bold p-2 my-2'>GENRE</p>
       {genre && genre.genres.map((gen, index) => (
         <p className='text-gray-600 hover:text-gray-400 p-2 cursor-pointer' key={index}>{gen.name}</p>
