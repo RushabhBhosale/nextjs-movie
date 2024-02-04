@@ -16,13 +16,13 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${inter.className} -mb-48`}>
+      <body className={`${inter.className}`}>
         <div className='sticky top-0'>
-          {/* <Navbar /> */}
+          <Navbar />
         </div>
-        <div className="lg:flex mt-4 h-[38rem] overflow-auto">
+        <div className="lg:flex mt-4 h-[50rem] sm:h-[38rem] overflow-auto">
           <div
-            className={`lg:w-[12.5rem] absolute sm:static transition-transform h-[38rem] overflow-auto sidebar ${isSidebarVisible ? 'gayab' : 'hai'
+            className={`lg:w-[12.5rem] absolute -mt-1 sm:static transition-transform h-[50rem] overflow-auto sidebar ${isSidebarVisible ? 'gayab' : 'hai'
               }`}
           >
             <Sidebar />
