@@ -6,7 +6,7 @@ const Featured = ({ kage }) => {
    return (
       <>
          {kage &&
-            <div className="relative w-full my-10 sm:h-[30rem] h-[15rem]">
+            <div className="relative w-full my-5 sm:my-10 sm:h-[30rem] h-[15rem]">
                <Image fill alt="kage" sizes={100} className="object-cover bbg-top" src={`https://image.tmdb.org/t/p/original/${kage.backdrop_path}`} />
                <div className="absolute z-20 w-full h-full bg-black opacity-60"></div>
                <div className="absolute z-30 w-full h-full flex flex-col justify-end sm:justify-center px-3 sm:px-16">
