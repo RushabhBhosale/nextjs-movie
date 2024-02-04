@@ -100,7 +100,7 @@ export default function Home() {
 
   return (
 
-    <div className="pages p-4 sm:ps-6 sm:pt-6 sm:pb-6 pb-24 sm:pe-3 overflow-auto">
+    <div className="pages p-4 sm:ps-6 sm:pt-6 sm:pb-6 pb-32 sm:pe-3 overflow-auto">
       {tv && list && <Carousel tv={list} getGenreById={getGenreById} />}
 
       <p className="text-2xl my-2 sm:mt-6 font-bold">Popular Movie</p>
