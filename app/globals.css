@@ -45,6 +45,25 @@ body {
    visibility: visible;
 }
 
+.sidebar {
+   width: 13% !important;
+}
+
+.page {
+   width: 87% !important;
+   height: 100vh !important;
+}
+
+.pages {
+   height: 100vh !important;
+}
+
+.navbar {
+   z-index: 999999;
+   background-color: hsla(220, 17%, 7%, 1);
+   padding: 5px 0 10px 0;
+}
+
 
 @media (max-width: 576px) {
    .navbar {
@@ -52,7 +71,7 @@ body {
       background-color: hsla(220, 17%, 7%, 1);
       padding: 15px 0;
    }
-   
+
    .gayab {
       transition: transform 0.3s ease-in-out !important;
       transform: translateX(-100%) !important;
@@ -62,6 +81,7 @@ body {
       height: 735px;
       position: fixed;
       top: 62px;
+      width: 200px !important;
    }
 
    .hai {
@@ -75,5 +95,10 @@ body {
       height: 150px !important;
       width: 50px !important;
       transform: translateY(-40%) !important;
+   }
+
+   .page {
+      width: 103% !important;
+      height: 100vh !important;
    }
 }

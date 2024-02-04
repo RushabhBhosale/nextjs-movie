@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
@@ -16,18 +16,18 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} pages overflow-auto`}>
         <div className='sticky navbar top-0'>
           <Navbar toggle={toggleSidebar} />
         </div>
-        <div className="lg:flex sm:mt-4 sm:h-[38rem] overflow-auto">
+        <div className="lg:flex mt-4 overflow-auto">
           <div
-            className={`lg:w-[12.5rem] absolute -mt-1 sm:static transition-transform overflow-auto sidebar ${isSidebarVisible ? 'gayab' : 'hai'
+            className={`absolute sidebar -mt-1 sm:static transition-transform overflow-auto sidebar ${isSidebarVisible ? 'gayab' : 'hai'
               }`}
           >
             <Sidebar />
           </div>
-          <div className="lg:w-[82rem] sm:w-full bg-[#1a1820] rounded-tl-xl">{children}</div>
+          <div className=" sm:w-full page bg-[#1a1820] rounded-tl-xl">{children}</div>
         </div>
       </body>
     </html>
