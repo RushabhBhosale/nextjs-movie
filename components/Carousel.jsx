@@ -4,10 +4,11 @@ import 'swiper/modules'
 import { Navigation, Pagination } from 'swiper/modules';
 import Image from "next/image";
 import { InformationCircleIcon, PlayIcon } from '@heroicons/react/24/solid'
+import Link from 'next/link';
 
 const Carousel = ({ tv, getGenreById }) => {
   return (
-    <div>
+    <div className='mt-12'>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -24,7 +25,7 @@ const Carousel = ({ tv, getGenreById }) => {
             <Image alt='backdrop' fill className="object-cover z-10" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} />
             <div className="absolute z-20 w-full h-full bg-black opacity-60"></div>
             <div className="absolute z-30 w-full h-full flex flex-col sm:justify-center justify-end px-6 sm:px-16">
-              <h3 className="ms:text-4xl text-3xl mb-1 text-white font-bold">{movie.name}</h3>
+              <h3 className="sm:text-5xl drop-shadow-lg text-3xl mb-1 text-white font-bold">{movie.name}</h3>
               <div className="flex gap-6">
                 <p className=" text-gray-200 text-lg font-bold my-1 sm:my-4">{new Date(movie.first_air_date).getFullYear()}</p>
                 <p className=" text-white text-sm font-bold my-1 sm:my-4 px-2 py-1 rounded-sm bg-[#313036e7] bg-opacity-85">{(movie.vote_average).toFixed(1)}</p>
@@ -43,14 +44,18 @@ const Carousel = ({ tv, getGenreById }) => {
                 </div>
               </div>
               <div className="flex gap-7">
-                <div className="my-7 flex gap-3 w-30 rounded-md bg-[#313036e7] hover:bg-[#242428] px-4 py-2">
-                  <PlayIcon width={20} />
-                  <button className=" text-sm font-medium text-white">Watch Now</button>
-                </div>
-                <div className="my-7 flex gap-2 w-30 rounded-md text-gray-700 bg-white px-4 py-2">
-                  <InformationCircleIcon width={20} />
-                  <button className=" text-sm font-medium text-black">More Info</button>
-                </div>
+                <Link href={`/detail/${movie.id}${movie.title?`movie${movie.title}`:`tv${movie.name}`}`}>
+                  <div className="my-7 flex gap-3 w-30 rounded-md bg-[#313036e7] hover:bg-[#242428] px-4 py-2">
+                    <PlayIcon width={20} />
+                    <button className=" text-sm font-medium text-white">Watch Now</button>
+                  </div>
+                </Link>
+                <Link href={`/detail/${movie.id}${movie.title?`movie${movie.title}`:`tv${movie.name}`}`}>
+                  <div className="my-7 flex gap-2 w-30 rounded-md text-gray-700 bg-white px-4 py-2">
+                    <InformationCircleIcon width={20} />
+                    <button className=" text-sm font-medium text-black">More Info</button>
+                  </div>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

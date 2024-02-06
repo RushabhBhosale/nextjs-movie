@@ -2,6 +2,7 @@
 import { ak } from '@/utils/api'
 import axios from 'axios'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const Sidebar = () => {
@@ -25,7 +26,9 @@ const Sidebar = () => {
     <div className='ps-8 pages'>
       <p className='font-bold p-2 my-2'>GENRE</p>
       {genre && genre.genres.map((gen, index) => (
-        <p className='text-gray-600 hover:text-gray-400 p-2 cursor-pointer' key={index}>{gen.name}</p>
+        <Link key={index} href={`/discover/${gen.id}`}>
+        <p className='text-gray-600 hover:text-gray-400 p-2 cursor-pointer'>{gen.name}</p>
+        </Link>
       ))}
       <p className='font-bold p-2 my-2'>Languages</p>
       <p className='text-gray-600 hover:text-gray-400 p-2 cursor-pointer'>Marathi</p>
