@@ -13,7 +13,7 @@ const Search = () => {
    useEffect(() => {
       fetchMovie()
       fetchTv()
-   }, [search])
+   }, [search ])
 
 
    const fetchMovie = () => {
