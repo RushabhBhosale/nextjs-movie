@@ -3,8 +3,6 @@ import { fetchDataFromApi } from "@/utils/api";
 import { useEffect, useState } from "react";
 import Carousel from "@/components/Carousel";
 import CardList from "@/components/CardList";
-import Image from "next/image";
-import { PlayIcon } from "@heroicons/react/24/solid";
 import Featured from "@/components/Featured";
 
 export default function Home() {
